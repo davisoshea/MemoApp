@@ -72,10 +72,7 @@ class DisplayNoteViewController: UIViewController, AVAudioPlayerDelegate {
         if let player = samplePlayer {
             player.currentTime = 0
             player.play()
-            if player.currentTime == TimeInterval(Float(label.text!)!){
-                player.stop()
-            }
-            player.numberOfLoops = -10
+            
             
 //            timer = Timerwith(timeInterval: (TimeInterval(Float(label.text!)!)), repeats: false, block: { [weak self] (timer) -> Void in
 //         if player.currentTime == timer.timeInterval{
@@ -83,7 +80,17 @@ class DisplayNoteViewController: UIViewController, AVAudioPlayerDelegate {
 //                }
 //
 //            })
-        timer = Timer.
+            func stopplayer(){
+                player.stop()
+            }
+            
+            timer = Timer.scheduledTimer(withTimeInterval: (TimeInterval(Float(label.text!)!)), repeats: false, block: { [weak self] (timer) -> Void in
+                            player.stop()
+                player.prepareToPlay()
+                            })
+            if player.isPlaying == false{
+                player.play()
+            }
         
         }
         else {
