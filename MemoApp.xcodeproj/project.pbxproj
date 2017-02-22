@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2948CDAA1E43AA72002E414F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948CDA91E43AA72002E414F /* AppDelegate.swift */; };
-		2948CDAC1E43AA72002E414F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948CDAB1E43AA72002E414F /* ViewController.swift */; };
+		2900B11D1E561A0600C2EE81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2900B11C1E561A0600C2EE81 /* ViewController.swift */; };
+		291FFF351E4E372500E94AB5 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 291FFF341E4E372500E94AB5 /* music.mp3 */; };
+		291FFF391E4E3A4200E94AB5 /* HUH.wav in Resources */ = {isa = PBXBuildFile; fileRef = 291FFF381E4E3A4200E94AB5 /* HUH.wav */; };
+		291FFF3B1E4E3DCF00E94AB5 /* J dilla - Doo Doo 432Hz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 291FFF3A1E4E3DCF00E94AB5 /* J dilla - Doo Doo 432Hz.mp3 */; };
 		2948CDAF1E43AA72002E414F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2948CDAD1E43AA72002E414F /* Main.storyboard */; };
 		2948CDB11E43AA72002E414F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2948CDB01E43AA72002E414F /* Assets.xcassets */; };
 		2948CDB41E43AA72002E414F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2948CDB21E43AA72002E414F /* LaunchScreen.storyboard */; };
+		2959554F1E4E3ECC007B27C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2959554E1E4E3ECC007B27C4 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2900B11C1E561A0600C2EE81 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		291FFF341E4E372500E94AB5 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		291FFF381E4E3A4200E94AB5 /* HUH.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HUH.wav; sourceTree = "<group>"; };
+		291FFF3A1E4E3DCF00E94AB5 /* J dilla - Doo Doo 432Hz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "J dilla - Doo Doo 432Hz.mp3"; sourceTree = "<group>"; };
 		2948CDA61E43AA72002E414F /* MemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2948CDA91E43AA72002E414F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2948CDAB1E43AA72002E414F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2948CDAE1E43AA72002E414F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2948CDB01E43AA72002E414F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2948CDB31E43AA72002E414F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2948CDB51E43AA72002E414F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2959554E1E4E3ECC007B27C4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +60,15 @@
 		2948CDA81E43AA72002E414F /* MemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				2948CDA91E43AA72002E414F /* AppDelegate.swift */,
-				2948CDAB1E43AA72002E414F /* ViewController.swift */,
+				2900B11C1E561A0600C2EE81 /* ViewController.swift */,
 				2948CDAD1E43AA72002E414F /* Main.storyboard */,
 				2948CDB01E43AA72002E414F /* Assets.xcassets */,
+				2959554E1E4E3ECC007B27C4 /* AppDelegate.swift */,
 				2948CDB21E43AA72002E414F /* LaunchScreen.storyboard */,
 				2948CDB51E43AA72002E414F /* Info.plist */,
+				291FFF341E4E372500E94AB5 /* music.mp3 */,
+				291FFF381E4E3A4200E94AB5 /* HUH.wav */,
+				291FFF3A1E4E3DCF00E94AB5 /* J dilla - Doo Doo 432Hz.mp3 */,
 			);
 			path = MemoApp;
 			sourceTree = "<group>";
@@ -124,8 +133,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2948CDB41E43AA72002E414F /* LaunchScreen.storyboard in Resources */,
+				291FFF351E4E372500E94AB5 /* music.mp3 in Resources */,
 				2948CDB11E43AA72002E414F /* Assets.xcassets in Resources */,
+				291FFF3B1E4E3DCF00E94AB5 /* J dilla - Doo Doo 432Hz.mp3 in Resources */,
 				2948CDAF1E43AA72002E414F /* Main.storyboard in Resources */,
+				291FFF391E4E3A4200E94AB5 /* HUH.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2948CDAC1E43AA72002E414F /* ViewController.swift in Sources */,
-				2948CDAA1E43AA72002E414F /* AppDelegate.swift in Sources */,
+				2900B11D1E561A0600C2EE81 /* ViewController.swift in Sources */,
+				2959554F1E4E3ECC007B27C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +309,7 @@
 				2948CDBA1E43AA72002E414F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

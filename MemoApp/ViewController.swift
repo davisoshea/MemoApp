@@ -7,19 +7,115 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class DisplayNoteViewController: UIViewController, AVAudioPlayerDelegate {
+    var audioPlayer:AVAudioPlayer?
+    var samplePlayer:AVAudioPlayer?
+    var timer: Timer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+
+        let url = URL.init(fileURLWithPath: Bundle.main.path(
+            forResource: "music",
+            ofType: "mp3")!)
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: url)
+            audioPlayer?.delegate = self
+            audioPlayer?.prepareToPlay()
+
+        } catch let error as NSError {
+            print("audioPlayer error \(error.localizedDescription)")
+        }
+        
+        let sample = URL.init(fileURLWithPath: Bundle.main.path(
+            forResource: "HUH",
+            ofType: "wav")!)
+        
+        do {
+            try samplePlayer = AVAudioPlayer(contentsOf: sample)
+            samplePlayer?.delegate = self
+            samplePlayer?.prepareToPlay()
+            
+        } catch let error as NSError {
+            print("audioPlayer error \(error.localizedDescription)")
+        }
+        configureDefaultSlider()
     }
+    
+    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var slider: UISlider!
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+    
+    func configureDefaultSlider() {
+        slider.minimumValue = 0
+        if let player = samplePlayer{
+        slider.maximumValue = Float(player.duration)
+        }
+        slider.value = 0
+        slider.isContinuous = true
     }
-
-
+    
+    
+    @IBAction func valueCahnged(_ sender: UISlider) {
+        label.text = String(sender.value)
+    }
+    
+    
+    @IBAction func PlaySample(_ sender: Any) {
+        if let player = samplePlayer {
+            player.currentTime = 0
+            player.play()
+            if player.currentTime == TimeInterval(Float(label.text!)!){
+                player.stop()
+            }
+            player.numberOfLoops = -10
+            
+//            timer = Timerwith(timeInterval: (TimeInterval(Float(label.text!)!)), repeats: false, block: { [weak self] (timer) -> Void in
+//         if player.currentTime == timer.timeInterval{
+//            player.stop()
+//                }
+//
+//            })
+        timer = Timer.
+        
+        }
+        else {
+            print("audio file is not found")
+        }
+    }
+    
+    
+    
+    @IBAction func Play(_ sender: Any) {
+        if let player = audioPlayer {
+            player.currentTime = 0
+            player.play()
+        }
+        else {
+            print("audio file is not found")
+        }
+    }
+    @IBAction func Stop(_ sender: Any) {
+        if let player = audioPlayer {
+            player.stop()
+        }
+        if let player = samplePlayer {
+            player.stop()
+        }
+    
+    
+    }
+    
+    
+    
 }
+
+
 
