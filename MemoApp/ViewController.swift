@@ -82,9 +82,9 @@ class DisplayNoteViewController: UIViewController, AVAudioPlayerDelegate {
 //            let playtime : TimeInterval = now + startDelay
 //            player.play(atTime: playtime)
 //            player.prepareToPlay()
-            player.stop()
+            player.play()
             timer = Timer.scheduledTimer(withTimeInterval: (TimeInterval(Float(label.text!)!)) , repeats: false, block: { (timer) in
-                player.play()
+                player.stop()
                 player.prepareToPlay()
             })
             
